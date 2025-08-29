@@ -184,13 +184,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 72,
                           height: 72,
                           decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 6,
+                                offset: Offset(2, 2),
+                              ),
+                            ],
                             shape: BoxShape.circle,
-                            color: Color(0xffFFB889),
+                            color: Color(0xff1F5B56),
                           ),
                           child: Center(
                             child: Icon(
                               Icons.water_drop,
-                              color: Color(0xff1F5B56),
+                              color: Color(0xffFFFFFF),
                             ),
                           ),
                         ),
@@ -216,13 +223,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 72,
                           height: 72,
                           decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 6,
+                                offset: Offset(2, 2),
+                              ),
+                            ],
                             shape: BoxShape.circle,
-                            color: Color(0xffFFB889),
+                            color: Color(0xff1F5B56),
                           ),
                           child: Center(
                             child: Icon(
                               IconsaxPlusBold.hospital,
-                              color: Color(0xff1F5B56),
+                              color: Color(0xffFFFFFF),
                             ),
                           ),
                         ),
@@ -248,13 +262,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 72,
                           height: 72,
                           decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 6,
+                                offset: Offset(2, 2),
+                              ),
+                            ],
                             shape: BoxShape.circle,
-                            color: Color(0xffFFB889),
+                            color: Color(0xff1F5B56),
                           ),
                           child: Center(
                             child: Icon(
                               IconsaxPlusBold.receipt_2_1,
-                              color: Color(0xff1F5B56),
+                              color: Color(0xffFFFFFF),
                             ),
                           ),
                         ),
@@ -280,6 +301,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 72,
                           height: 72,
                           decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 6,
+                                offset: Offset(2, 2),
+                              ),
+                            ],
                             shape: BoxShape.circle,
                             color: Color(0xffFFB889),
                           ),
@@ -321,6 +349,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(height: 20),
             Container(
+              padding: EdgeInsets.all(10),
               width: double.infinity,
               height: 170,
               decoration: BoxDecoration(
@@ -337,6 +366,83 @@ class _HomeScreenState extends State<HomeScreen> {
                   colors: [Color(0xffEFF0F6), Color(0xffEFF0F6)],
                 ),
                 borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Color(0xffFFB889),
+                        backgroundImage: AssetImage(
+                          "assets/images/doctor2.png",
+                        ),
+                        radius: 60,
+                      ),
+
+                      Container(
+                        height: 120,
+                        width: 2,
+                        color: Color(0xff1F5B56),
+                      ),
+                      Container(
+                        child: Column(
+                          spacing: 10,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Dr. Whitney Glass",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Inter",
+                                color: Color(0xff1F5B56),
+                              ),
+                            ),
+                            Text(
+                              "Reproductive Specialist",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Inter",
+                                color: Color(0xff1F5B56),
+                              ),
+                            ),
+                            Text(
+                              "Distance: 1.2 miles",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: "Inter",
+                                color: Color(0xff1F5B56),
+                              ),
+                            ),
+                            Container(
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Text(
+                                    "Rating: 4",
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w700,
+                                      fontFamily: "Inter",
+                                      color: Color(0xff1F5B56),
+                                    ),
+                                  ),
+                                  Icon(Icons.star, color: Color(0xff1F5B56)),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],

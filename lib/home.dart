@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int currentIndex = 0;
+  int currentIndex = 2;
 
   List<Widget> screens = [
     HomeScreen(),
