@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_pet_app/Onboarding.dart';
 import 'package:my_pet_app/home.dart';
 import 'package:my_pet_app/login.dart';
 import 'package:my_pet_app/signup.dart';
@@ -16,7 +17,7 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       title: "Vet Track",
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: Onboarding(),
     );
   }
 }
