@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_pet_app/login.dart';
+import 'package:my_pet_app/signup.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -63,52 +65,58 @@ class _OnboardingState extends State<Onboarding> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Expanded(
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomLeft,
-                          end: Alignment.topRight,
-                          colors: [Color(0xffEFF0F6), Color(0xffEFF0F6)],
+                  GestureDetector(
+                    onTap: () => Signup(),
+                    child: Expanded(
+                      child: Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: [Color(0xffEFF0F6), Color(0xffEFF0F6)],
+                          ),
                         ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Sign Up",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: "Inter",
-                            letterSpacing: 1,
-                            color: Colors.black,
+                        child: Center(
+                          child: Text(
+                            "Sign Up",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: "Inter",
+                              letterSpacing: 1,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
                   SizedBox(width: 20),
-                  Expanded(
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomLeft,
-                          end: Alignment.topRight,
-                          colors: [Color(0xffEFF0F6), Color(0xffEFF0F6)],
+                  GestureDetector(
+                    onTap: () => Login(),
+                    child: Expanded(
+                      child: Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: [Color(0xffEFF0F6), Color(0xffEFF0F6)],
+                          ),
                         ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Login",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: "Inter",
-                            letterSpacing: 1,
-                            color: Colors.black,
+                        child: Center(
+                          child: Text(
+                            "Login",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: "Inter",
+                              letterSpacing: 1,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),

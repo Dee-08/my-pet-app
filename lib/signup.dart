@@ -385,26 +385,39 @@ class _SignupState extends State<Signup> {
                           ),
                         ),
                         SizedBox(height: 20),
-                        RichText(
-                          textAlign: TextAlign.center,
-                          text: TextSpan(
-                            style: TextStyle(
-                              fontFamily: "Inter",
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              "Already have an account?",
+                              style: TextStyle(
+                                fontFamily: "Inter",
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black,
+                              ),
                             ),
-                            children: [
-                              TextSpan(text: "Already have an account? "),
-                              TextSpan(
-                                text: "Login",
+                            SizedBox(width: 5),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Login(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                "Log in",
                                 style: TextStyle(
                                   color: Color(0xff2E8C84),
-                                  fontWeight: FontWeight.bold,
+                                  fontFamily: "Inter",
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
