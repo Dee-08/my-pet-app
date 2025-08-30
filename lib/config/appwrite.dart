@@ -7,7 +7,7 @@ class AppwriteConfig {
 
   static const String endpoint = "https://nyc.cloud.appwrite.io/v1";
 
-  static const String userCollection = "68b2f027002fc8307d24";
+  static const String userTable = "68b2f027002fc8307d24";
 
   static const String databaseId = "68b2ef5f0010ae071a88";
 
@@ -16,6 +16,8 @@ class AppwriteConfig {
   ).setProject(appwriteProjectId);
 
   Client get client => _client;
+
+  static final tablesDB = TablesDB(_client);
 
   static Account account = Account(_client);
 

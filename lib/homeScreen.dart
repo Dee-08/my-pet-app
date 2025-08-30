@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:my_pet_app/config/appwrite.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,6 +11,32 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final storage = FlutterSecureStorage();
+
+  Map? userData;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getUser();
+  }
+
+  getUser() async {
+    try {
+      var userId = await storage.read(key: "userId");
+      // ignore: deprecated_member_use
+      var user = await AppwriteConfig.tablesDB.getRow(
+        databaseId: AppwriteConfig.databaseId,
+        tableId: AppwriteConfig.userTable,
+        rowId: userId ?? "",
+      );
+
+      setState(() {
+        userData = user.data;
+      });
+    } catch (e) {}
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Welcome Jane,",
+                    "Welcome ${userData?["fullName"]},",
                     style: TextStyle(
                       fontFamily: "Inter",
                       fontSize: 28,

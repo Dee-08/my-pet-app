@@ -37,11 +37,10 @@ class _SignupState extends State<Signup> {
         password: passwordController.text,
       );
 
-      // ignore: deprecated_member_use
-      AppwriteConfig.databases.createDocument(
+      AppwriteConfig.tablesDB.createRow(
         databaseId: AppwriteConfig.databaseId,
-        collectionId: AppwriteConfig.userCollection,
-        documentId: user.$id,
+        tableId: AppwriteConfig.userTable,
+        rowId: user.$id,
         data: {"fullName": nameController.text, "email": emailController.text},
       );
 
