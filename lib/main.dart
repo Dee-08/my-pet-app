@@ -17,7 +17,7 @@ class MyWidget extends StatelessWidget {
     return MaterialApp(
       title: "Vet Track",
       debugShowCheckedModeBanner: false,
-      home: Onboarding(),
+      home: Splash(),
     );
   }
 }
